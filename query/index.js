@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const { request } = require("express");
-const axios = request("axios");
+const axios = require('axios');
 
 const app = express();
 app.use(bodyParser.json());
@@ -54,7 +54,7 @@ app.listen(4002, async () => {
     const res = await axios.get("http://localhost:4005/events");
 
     for(let event of res.data){
-      console.log("Processing event: ", evnet.type);
+      console.log("Processing event: ", event.type);
 
       handleEvent(event.type, event.data);
     }
