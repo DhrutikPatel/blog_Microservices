@@ -8,3 +8,6 @@
 - minikube status
 - minikube start
 - eval $(minikube docker-env) [Befor creating docker container]
+
+
+- kubectl exec -it posts -- sh
