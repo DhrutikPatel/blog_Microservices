@@ -10,20 +10,20 @@ const events = [];
 app.post('/events', (req, res) => {
   const event = req.body;
   
-  event.push(event);
+  events.push(event);
 
-  axios.post("http://localhost:4000/events", event).catch((err) => {
+  axios.post("http://posts-clusterip-srv:4000/events", event).catch((err) => {
     console.log(err.message);
   });
-  axios.post("http://localhost:4001/events", event).catch((err) => {
-    console.log(err.message);
-  });
-  axios.post("http://localhost:4002/events", event).catch((err) => {
-    console.log(err.message);
-  });
-  axios.post("http://localhost:4003/events", event).catch((err) => {
-    console.log(err.message);
-  });
+  // axios.post("https://bug-free-waffle-v5gqrv769vcxpg4-4001.app.github.dev/events", event).catch((err) => {
+  //   console.log(err.message);
+  // });
+  // axios.post("https://bug-free-waffle-v5gqrv769vcxpg4-4002.app.github.dev/events", event).catch((err) => {
+  //   console.log(err.message);
+  // });
+  // axios.post("https://bug-free-waffle-v5gqrv769vcxpg4-4003.app.github.dev/events", event).catch((err) => {
+  //   console.log(err.message);
+  // });
   res.send({status: 'OK'});
 })
 

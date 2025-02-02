@@ -11,3 +11,11 @@
 
 
 - kubectl exec -it posts -- sh
+
+- minikube ip
+
+- kubectl port-forward service/posts-srv 4000:4000
+
+
+
+
