@@ -7,7 +7,7 @@ const PostList = () => {
   const [posts, setPosts] = useState({});
   
   const fetchPosts = async () => {
-    const res = await axios.get('http://localhost:4000/posts');
+    const res = await axios.get('https://bug-free-waffle-v5gqrv769vcxpg4-4000.app.github.dev/posts');
     setPosts(res.data);
   };
 

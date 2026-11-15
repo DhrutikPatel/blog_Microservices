@@ -7,7 +7,7 @@ const PostCreate = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
     
-    await axios.post('http://localhost:4000/posts', {title});
+    await axios.post('https://bug-free-waffle-v5gqrv769vcxpg4-4000.app.github.dev/posts', {title});
 
     setTitle('');
   };

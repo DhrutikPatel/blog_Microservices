@@ -7,7 +7,7 @@ const CommentCreate = ({ postId }) => {
   const onSubmit = async (event) => {
     event.preventDefault();
 
-    await axios.post(`http://localhost:4001/posts/${postId}/comments`, { content });
+    await axios.post(`https://bug-free-waffle-v5gqrv769vcxpg4-4001.app.github.dev/posts/${postId}/comments`, { content });
 
     setContent('');
 
